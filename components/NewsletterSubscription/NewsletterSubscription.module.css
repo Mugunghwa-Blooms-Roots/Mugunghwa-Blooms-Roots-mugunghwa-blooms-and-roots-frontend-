@@ -1,0 +1,122 @@
+.newsletterSubscriptionSection {
+    background-image: url(https://i.ibb.co/tPDXXKMK/featured-2-1.jpg);
+    padding: 60px 40px;
+    border-radius: 24px;
+    object-fit: cover;
+    object-position: top center;
+    margin: 60px auto;
+    box-shadow: 0 10px 30px #ffffff;
+}
+
+.newsletterSubscriptionContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.newsletterSubscriptionContent {
+    flex: 1;
+}
+
+.newsletterSubscriptionTitle {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.newsletterSubscriptionDescription {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.newsletterSubscriptionForm {
+    flex: 1;
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.newsletterSubscriptionFormInput {
+    flex: 1;
+    padding: 16px 24px;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    width: 400px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+.newsletterSubscriptionFormInput::placeholder {
+    color: #414442;
+}
+
+.newsletterSubscriptionFormInput:focus {
+    border-color: #c8d5ca;
+    box-shadow: 0 0 0 4px #6e2628;
+}
+
+.newsletterSubscriptionFormButton {
+    padding: 16px 36px;
+    background-color: #D04F51;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+.newsletterSubscriptionFormButton:hover {
+    background-color: #D04F51;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px #9d3234;
+}
+
+.newsletterSubscriptionFormButton:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 860px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletterSection {
+        padding: 40px 20px;
+        border-radius: 16px;
+    }
+
+    .form {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+  
+    .title {
+        font-size: 26px;
+    }
+}

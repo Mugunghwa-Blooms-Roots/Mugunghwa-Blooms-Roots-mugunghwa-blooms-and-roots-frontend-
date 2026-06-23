@@ -1,0 +1,110 @@
+.footer {
+  background-color: #FCF9F0; 
+  color: #E93B3E;
+  padding-top: 60px;
+  margin-top: auto;
+  width: 106% !important;
+  margin-left: -45px;
+  font-family: inherit;
+}
+
+.footerContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+
+@media (max-width: 992px) {
+  .footerContainer {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footerContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .brandSection {
+    text-align: center;
+  }
+}
+
+.footerMugunghwaBloomsRootsLogo {
+  width: 120px;
+  height: 120px;
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  letter-spacing: 1px;
+}
+
+.footerDescription {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 20px;
+  color: #89090c;
+  max-width: 320px;
+}
+
+.footerColumnTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #a11e20;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footerLinksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footerLink {
+  color: #E93B3E;
+  text-decoration: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footerLink:hover {
+  color: #8e1416;
+  transform: translateX(5px);
+}
+
+.footerContactInfo {
+  font-size: 15px;
+  color: #E93B3E;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footerBottomBar {
+  margin-top: 60px;
+  padding: 24px 20px;
+  text-align: center;
+  background-color: #D73B3D;
+  border-top: 1px solid #852223;
+  font-size: 14px;
+  color: #fffcfc;
+}
+
+.footerContactInfoIcon {
+  width: 30px !important;
+  height: 30px !important;
+}
