@@ -471,3 +471,49 @@ body {
   flex-direction: column;
   align-items: flex-start;
 }
+
+/* Мобільна адаптація для сайдбару */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Мобільна адаптація для слайдера */
+@media (max-width: 768px) {
+  .sliderContainer {
+    width: 100%;
+    height: auto; /* Дозволяємо властивості aspect-ratio автоматично керувати висотою */
+    min-height: 250px; /* Орієнтовна мінімальна висота, щоб контент не злипався */
+  }
+
+  /* Трохи зменшуємо відступи всередині слайду для компактності */
+  .slide {
+    padding: 0 5%;
+  }
+
+  /* Зменшуємо розмір шрифтів, щоб текст гарно виглядав на телефоні */
+  .bannerText {
+    font-size: 24px; 
+    margin-bottom: 10px;
+  }
+
+  .bannerSubtext {
+    font-size: 16px;
+  }
+  
+  /* Адаптація кнопок навігації (стрілочок) */
+  .navBtn {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+  
+  .prev { 
+    left: 10px; 
+  }
+  
+  .next { 
+    right: 10px; 
+  }
+}

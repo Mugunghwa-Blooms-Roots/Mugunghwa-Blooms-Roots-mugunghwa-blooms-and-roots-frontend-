@@ -96,6 +96,14 @@
   align-items: stretch;
 }
 
+@media (max-width: 1024px) {
+  .mainLayout {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
 .sidebar {
   width: 300px;
   flex-shrink: 0;
