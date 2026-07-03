@@ -19,9 +19,13 @@ import LinkedInLogo from '../../assets/logo/LinkedInLogo/LinkedInLogo';
 import XLogo from '../../assets/logo/XLogo/XLogo';
 import PinterestLogo from '../../assets/logo/PinterestLogo/PinterestLogo';
 import PhoneLogo from '../../assets/logo/PhoneLogo/PhoneLogo';
+import { useFavoritesGoods } from '@/context/FavoritesGoodsContext/FavoritesGoodsContext';
+import { useCompareGoods } from '@/context/CompareGoodsContext/CompareGoodsContext';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { favoritesGoodsCount } = useFavoritesGoods();
+    const { compareGoodsCount } = useCompareGoods();
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -78,11 +82,19 @@ export default function Header() {
                         <div className={styles.actionItem}>
                             <NewProductsLogo className={styles.catalogLogo} /> Акції та новинки
                         </div>
-                        <div className={styles.actionItem}>
-                            <SavesLogo className={styles.catalogLogo} /> Закладки
+                        <div className={styles.actionItem} style={{ position: 'relative' }}>
+                            <SavesLogo className={styles.catalogLogo} /> 
+                            {compareGoodsCount > 0 && 
+                                <span className={styles.compareBadge}>{compareGoodsCount}</span>
+                            }
+                            Порівняння
                         </div>
-                        <div className={styles.actionItem}>
-                            <FavoritesLogo className={styles.catalogLogo} /> Улюблене
+                        <div className={styles.actionItem} style={{ position: 'relative' }}>
+                            <FavoritesLogo className={styles.catalogLogo} /> 
+                            {favoritesGoodsCount > 0 && 
+                                <span className={styles.favoritesBadge}>{favoritesGoodsCount}</span>
+                            }
+                            Улюблене
                         </div>
                         <div className={styles.actionItem}>
                             <ShoppingCartLogo className={styles.catalogLogo} /> Кошик
@@ -106,11 +118,29 @@ export default function Header() {
                     </div>
                     <div className={styles.sidebarContent}>
                         <div className={styles.sidebarActions}>
-                            <div className={styles.sidebarActionItem}><CatalogLogo className={styles.catalogLogoMobile} /> Каталог</div>
-                            <div className={styles.sidebarActionItem}><NewProductsLogo className={styles.catalogLogoMobile} /> Акції та новинки</div>
-                            <div className={styles.sidebarActionItem}><SavesLogo className={styles.catalogLogoMobile} /> Закладки</div>
-                            <div className={`${styles.sidebarActionItem} ${styles.favoritesGoodsActionItem}`}><FavoritesLogo className={styles.catalogLogoMobile} /> Улюблене</div>
-                            <div className={`${styles.sidebarActionItem} ${styles.authorizeToSystemActionItem}`}><AuthorizationLogo className={styles.catalogLogoMobile} /> Увійти</div>
+                            <div className={styles.sidebarActionItem}>
+                                <CatalogLogo className={styles.catalogLogoMobile} /> 
+                                Каталог
+                            </div>
+                            <div className={styles.sidebarActionItem}>
+                                <NewProductsLogo className={styles.catalogLogoMobile} /> 
+                                Акції та новинки
+                            </div>
+                            <div className={styles.sidebarActionItem}>
+                                <SavesLogo className={styles.catalogLogoMobile} /> 
+                                Закладки
+                            </div>
+                            <div className={`${styles.sidebarActionItem} ${styles.favoritesGoodsActionItem}`} style={{ position: 'relative' }}>
+                                <FavoritesLogo className={styles.catalogLogoMobile} /> 
+                                Улюблене
+                                {favoritesGoodsCount > 0 && 
+                                    <span className={styles.favoritesBadgeMobile}>{favoritesGoodsCount}</span>
+                                }
+                            </div>
+                            <div className={`${styles.sidebarActionItem} ${styles.authorizeToSystemActionItem}`}>
+                                <AuthorizationLogo className={styles.catalogLogoMobile} /> 
+                                Увійти
+                            </div>
                         </div>
                         <div className={styles.sidebarDivider}></div>
                         <div className={styles.sidebarActions}>

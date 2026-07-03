@@ -14,7 +14,7 @@ export default function NewsletterSubscription() {
 
         setEmail('test_email@gmail.com');
 
-    alert('Щиро дякуємо Вам за підписку на наш онлайн-магазтн "Mugunghwa Roots & Blooms"! Раді вітати Вас в нашому дружньому ком`юніті!');
+        alert('Щиро дякуємо Вам за підписку на наш онлайн-магазтн "Mugunghwa Roots & Blooms"! Раді вітати Вас в нашому дружньому ком`юніті!');
     }
 
     return (

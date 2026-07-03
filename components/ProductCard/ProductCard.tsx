@@ -4,7 +4,11 @@ import { useState } from 'react';
 import Image from 'next/image';
 import styles from './ProductCard.module.css';
 import CardButton from "../CardButton/CardButton";
+import { useFavoritesGoods } from '@/context/FavoritesGoodsContext/FavoritesGoodsContext';
 import MugunghwaBloomsRootsGrayLogo from '../../assets/logo/MugunghwaBloomsRootsLogo/gray/MugunghwaBloomsRootsGrayLogo';
+import HeartLogo from '@/assets/logo/HeartLogo/HeartLogo';
+import CompareLogo from '@/assets/logo/CompareLogo/CompareLogo';
+import { useCompareGoods } from '@/context/CompareGoodsContext/CompareGoodsContext';
 
 interface ProductCardProps {
     img: string;
@@ -66,6 +70,8 @@ export default function ProductCard({
     const [selectedVolume, setSelectedVolume] = useState<number | null>(1);
     const [isFavorite, setIsFavorite] = useState(false);
     const [isCompared, setIsCompared] = useState(false);
+    const { toggleFavoritesGoods } = useFavoritesGoods();
+    const { toggleCompareGoods } = useCompareGoods();
 
     return (
         <>
@@ -75,19 +81,21 @@ export default function ProductCard({
                         className={`${styles.actionBtn} ${isFavorite ? styles.favoriteActive : ''}`}
                         onClick={(e) => { 
                             e.stopPropagation();
-                            setIsFavorite(!isFavorite); 
+                            const newState = !isFavorite;
+                            setIsFavorite(newState);
+                            toggleFavoritesGoods(newState);
                         }}
                         title={isFavorite ? "Видалити з улюбленого" : "Додати в улюблене"}
                     >
-                        <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
+                        <HeartLogo className={styles.heartLogo} />
                     </button>
                     <button 
                         className={`${styles.actionBtn} ${isCompared ? styles.compareActive : ''}`}
                         onClick={(e) => { 
                             e.stopPropagation(); 
-                            setIsCompared(!isCompared); 
+                            const newState = !isCompared;
+                            setIsCompared(newState); 
+                            toggleCompareGoods(newState);
                         }}
                         title={isCompared ? "Прибрати з порівняння" : "Додати до порівняння"}
                     >
@@ -154,8 +162,12 @@ export default function ProductCard({
                                 <span className={styles.brandName}>{creator}</span>
                             </span>
                         </h5>
-                        <h5 className={styles.productCreator}><b>Доступність</b>: В наявності</h5>
-                        <h5 className={styles.productCreator}><b>Рекомендовано для</b>: {recommendedFor}</h5>
+                        <h5 className={styles.productCreator}>
+                            <b>Доступність</b>: В наявності
+                        </h5>
+                        <h5 className={styles.productCreator}>
+                            <b>Рекомендовано для</b>: {recommendedFor}
+                        </h5>
                         <h5 className={styles.productCreator}>
                             <b>Об'єм</b>:
                             <button 

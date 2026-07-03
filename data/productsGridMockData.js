@@ -1,6 +1,3 @@
-import styles from "../components/CardButton/CardButton.module.css";
-import BasketLogo from "@/assets/logo/BasketLogo/BasketLogo";
-
 const productsGridMockData = [
     { 
         id: 1, 
@@ -29,8 +26,6 @@ const productsGridMockData = [
         howToUse: "Нанесіть необхідну кількість засобу на вологі руки або душовий рушник. Втирайте в шкіру тіла або волосся/шкіру голови, а потім ретельно змийте. Використовувати лише зовнішньо.",
         badgeIcon: "https://i.ibb.co/mr6nJBgN/images-9-removebg-preview.png",
         badgeAlt: "Зволожуючий засіб (іконка/зображення)",
-        basketIcon: <BasketLogo />,
-        cardButton: styles.cardButton,
         producerImgSrc: "https://i.ibb.co/VcNkd8yf/share-image-1-6066f015828bc1624f732046ff7d3592-removebg-preview.png",
         producerImgAlt: "Illiyoon (логотип)",
         producerImgWidth: 80,
@@ -65,8 +60,6 @@ const productsGridMockData = [
         howToUse: "Нанесіть необхідну кількість засобу на вологі руки або душове рушник. Втирайте в шкіру тіла або волосся/шкіру голови, а потім ретельно змийте. Використовувати лише зовнішньо.",
         badgeIcon: "https://i.ibb.co/hF6drL73/images-removebg-preview.png",
         badgeAlt: "Сонцезахисний крем (іконка/зображення)",
-        basketIcon: <BasketLogo />,
-        cardButton: styles.cardButton,
         producerImgSrc: "https://i.ibb.co/KcDx0y1w/beauty-of-joseon-741540.png",
         producerImgAlt: "Beauty of Joseon (логотип)",
         producerImgWidth: 65,
@@ -101,8 +94,6 @@ const productsGridMockData = [
         howToUse: "Почніть з зволоженої шкіри. Візьміть невелику кількість засобу для очищення на долоні та додайте трохи води, щоб активувати текстуру, схожу на мочі. Ніжно масажуйте обличчя круговими рухами, дозволяючи м’якій піні видалити забруднення та надлишки себуму. Ретельно змийте теплою водою та промокніть обличчя рушником. Використовуйте вранці та ввечері як перший крок у вашій процедурі догляду за шкірою.",
         badgeIcon: "https://i.ibb.co/j7yDQbm/2927526.png",
         badgeAlt: "Очищувач шкіри (іконка/зображення)",
-        basketIcon: <BasketLogo />,
-        cardButton: styles.cardButton,
         producerImgSrc: "https://i.ibb.co/ZvRxxB0/arencia-korean-skincare-brand-logo-removebg-preview.png",
         producerImgAlt: "Arencia (логотип)",
         producerImgWidth: 30,
@@ -137,8 +128,6 @@ const productsGridMockData = [
         howToUse: "Почніть з зволоженої шкіри. Візьміть невелику кількість засобу для очищення на долоні та додайте трохи води, щоб активувати текстуру, схожу на мочі. Ніжно масажуйте обличчя круговими рухами, дозволяючи м’якій піні видалити забруднення та надлишки себуму. Ретельно змийте теплою водою та промокніть обличчя рушником. Використовуйте вранці та ввечері як перший крок у вашій процедурі догляду за шкірою.",
         badgeIcon: "https://i.ibb.co/7NdRq2RC/images-1-removebg-preview.png",
         badgeAlt: "Щітка для миття волосся (іконка/зображення)",
-        basketIcon: <BasketLogo />,
-        cardButton: styles.cardButton,
         producerImgSrc: "https://i.ibb.co/xKLvbWj4/images-2.png",
         producerImgAlt: "KUNDAL (логотип)",
         producerImgWidth: 35,
