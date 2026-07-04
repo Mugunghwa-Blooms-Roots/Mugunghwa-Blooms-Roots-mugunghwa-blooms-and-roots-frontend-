@@ -12,6 +12,7 @@ import AuthorizationLogo from "../../assets/logo/AuthorizationLogo/Authorization
 import SavesLogo from "../../assets/logo/SavesLogo/SavesLogo";
 import FacebookLogo from '../../assets/logo/FacebookLogo/FacebookLogo';
 import InstagramLogo from '../../assets/logo/InstagramLogo/InstagramLogo';
+import InstagramRedLogo from '@/assets/logo/InstagramLogo/InstagramRedLogo';
 import TikTokLogo from '../../assets/logo/TikTokLogo/TikTokLogo';
 import TelegramLogo from '../../assets/logo/TelegramLogo/TelegramLogo';
 import ViberLogo from '../../assets/logo/ViberLogo/ViberLogo';
@@ -21,6 +22,13 @@ import PinterestLogo from '../../assets/logo/PinterestLogo/PinterestLogo';
 import PhoneLogo from '../../assets/logo/PhoneLogo/PhoneLogo';
 import { useFavoritesGoods } from '@/context/FavoritesGoodsContext/FavoritesGoodsContext';
 import { useCompareGoods } from '@/context/CompareGoodsContext/CompareGoodsContext';
+import FacebookRedLogo from '@/assets/logo/FacebookLogo/FacebookRedLogo';
+import TikTokRedLogo from '@/assets/logo/TikTokLogo/TikTokRedLogo';
+import TelegramRedLogo from '@/assets/logo/TelegramLogo/TelegramRedLogo';
+import ViberRedLogo from '@/assets/logo/ViberLogo/ViberRedLogo';
+import LinkedInRedLogo from '@/assets/logo/LinkedInLogo/LinkedInRedLogo';
+import XRedLogo from '@/assets/logo/XLogo/XRedLogo';
+import PinterestRedLogo from '@/assets/logo/PinterestLogo/PinterestRedLogo';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -126,9 +134,12 @@ export default function Header() {
                                 <NewProductsLogo className={styles.catalogLogoMobile} /> 
                                 Акції та новинки
                             </div>
-                            <div className={styles.sidebarActionItem}>
+                            <div className={styles.sidebarActionItem} style={{ position: 'relative' }}>
                                 <SavesLogo className={styles.catalogLogoMobile} /> 
-                                Закладки
+                                Порівняння
+                                {compareGoodsCount > 0 &&
+                                    <span className={styles.compareBadgeMobile}>{compareGoodsCount}</span>
+                                }
                             </div>
                             <div className={`${styles.sidebarActionItem} ${styles.favoritesGoodsActionItem}`} style={{ position: 'relative' }}>
                                 <FavoritesLogo className={styles.catalogLogoMobile} /> 
@@ -143,15 +154,15 @@ export default function Header() {
                             </div>
                         </div>
                         <div className={styles.sidebarDivider}></div>
-                        <div className={styles.sidebarActions}>
-                            <InstagramLogo className={`${styles.sidebarActionItem} ${styles.socialIconLogo} ${styles.instagramLogo}`} />
-                            <FacebookLogo className={`${styles.sidebarActionItem}  ${styles.socialIconLogo} ${styles.facebookLogo}`} />
-                            <TikTokLogo className={`${styles.socialIconLogo} ${styles.tikTokLogo}`} />
-                            <TelegramLogo className={`${styles.socialIconLogo} ${styles.telegramLogo}`} />
-                            <ViberLogo className={`${styles.socialIconLogo} ${styles.viberLogo}`} />
-                            <LinkedInLogo className={`${styles.socialIconLogo} ${styles.linkedInLogo}`} />
-                            <XLogo className={`${styles.socialIconLogo} ${styles.xLogo}`} />
-                            <PinterestLogo className={`${styles.socialIconLogo} ${styles.pinterestLogo}`} />
+                        <div className={styles.sidebarSocials}>
+                            <InstagramRedLogo className={`${styles.socialIconLogo} ${styles.instagramLogo}`} />
+                            <FacebookRedLogo className={`${styles.socialIconLogo} ${styles.facebookLogo}`} />
+                            <TikTokRedLogo className={`${styles.socialIconLogo} ${styles.tikTokLogo}`} />
+                            <TelegramRedLogo className={`${styles.socialIconLogo} ${styles.telegramLogo}`} />
+                            <ViberRedLogo className={`${styles.socialIconLogo} ${styles.viberLogo}`} />
+                            <LinkedInRedLogo className={`${styles.socialIconLogo} ${styles.linkedInLogo}`} />
+                            <XRedLogo className={`${styles.socialIconLogo} ${styles.xLogo}`} />
+                            <PinterestRedLogo className={`${styles.socialIconLogo} ${styles.pinterestLogo}`} />
                         </div>
                         <div className={styles.sidebarContacts}>
                             <a href="tel:+380678333023" className={styles.phoneButtonMobile}>

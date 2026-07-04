@@ -1,4 +1,4 @@
-const PinterestLogo = ({ className }: { className?: string; }) => {
+const PinterestRedLogo = ({ className }: { className?: string; }) => {
     return (
         <>
             <svg 
@@ -13,7 +13,7 @@ const PinterestLogo = ({ className }: { className?: string; }) => {
             <g>
             <g>
                 <path 
-                    fill="#FFFFFF" 
+                    fill="#D73B3D" 
                     d="M71.9,5.4C35.1,5.4,5.3,35.2,5.3,72c0,28.2,17.5,52.3,42.3,62c-0.6-5.3-1.1-13.3,0.2-19.1
                         c1.2-5.2,7.8-33.1,7.8-33.1s-2-4-2-9.9c0-9.3,5.4-16.2,12-16.2c5.7,0,8.4,4.3,8.4,9.4c0,5.7-3.6,14.3-5.5,22.2
                         c-1.6,6.6,3.3,12,9.9,12c11.8,0,20.9-12.5,20.9-30.5c0-15.9-11.5-27.1-27.8-27.1c-18.9,0-30.1,14.2-30.1,28.9
@@ -27,4 +27,4 @@ const PinterestLogo = ({ className }: { className?: string; }) => {
     );
 }
 
-export default PinterestLogo;
+export default PinterestRedLogo;
