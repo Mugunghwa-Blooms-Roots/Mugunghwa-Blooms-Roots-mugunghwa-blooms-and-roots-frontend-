@@ -35,6 +35,57 @@
   }
 }
 
+@media (max-width: 480px) {
+  .footer {
+    width: 116% !important;
+  }
+
+  .footerMugunghwaBloomsRootsLogo {
+    width: 130px !important;
+    height: 130px !important;
+    margin-top: -30px !important;
+    margin-left: 135px !important;
+  }
+
+  .footerDescription {
+    margin-left: 35px !important;
+    font-size: 14px !important;
+  }
+
+  .footerLinksFirstSection .footerColumnTitle {
+    margin-left: 90px !important;
+  }
+
+  .footerLinksSecondSection .footerColumnTitle {
+    margin-left: 140px !important;
+  }
+
+  .footerLinksThirdSection .footerColumnTitle {
+    margin-left: 150px !important;
+  }
+
+  .footerLinksFirstSection .footerLinksList {
+    margin-left: 130px !important;
+  }
+
+  .footerLinksSecondSection .footerLinksList {
+    margin-left: 180px !important;
+  }
+
+  .footerLinksThirdSection .footerLinksList {
+    margin-left: 155px !important;
+  }
+
+  .footerLinksList {
+    margin-left: 90px !important;
+  }
+
+  .footerBottomBarCopyrights {
+    font-size: 12px !important;
+    margin-left: 20px !important;
+  }
+}
+
 .footerMugunghwaBloomsRootsLogo {
   width: 120px;
   height: 120px;
@@ -43,6 +94,7 @@
   color: #ffffff;
   margin-top: -10px;
   margin-bottom: -10px;
+  margin-left: 25px;
   letter-spacing: 1px;
 }
 
@@ -50,6 +102,7 @@
   font-size: 15px;
   line-height: 1.6;
   margin-top: 20px;
+  margin-left: 30px;
   color: #89090c;
   max-width: 320px;
 }
@@ -75,7 +128,7 @@
 .footerLink {
   color: #E93B3E;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
   transition: all 0.3s ease;
   display: inline-block;
 }
@@ -86,7 +139,7 @@
 }
 
 .footerContactInfo {
-  font-size: 15px;
+  font-size: 14px;
   color: #E93B3E;
   margin-bottom: 5px;
   display: flex;
@@ -107,4 +160,16 @@
 .footerContactInfoIcon {
   width: 30px !important;
   height: 30px !important;
+}
+
+.footerContainer .footerLinksSection:nth-child(2) {
+  margin-left: -45px;
+}
+
+.footerContainer .footerLinksSection:nth-child(3) {
+  margin-left: -95px;
+}
+
+.footerContactSection {
+  margin-left: -105px;
 }

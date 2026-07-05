@@ -9,12 +9,9 @@ export default function NewsletterSubscription() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-
-        console.log('Новий підписник маркетплейсу "Mugunghwa Roots & Blooms":', email);
-
+        console.log('Новий підписник онлайн-магазину "Mugunghwa Roots & Blooms":', email);
         setEmail('test_email@gmail.com');
-
-        alert('Щиро дякуємо Вам за підписку на наш онлайн-магазтн "Mugunghwa Roots & Blooms"! Раді вітати Вас в нашому дружньому ком`юніті!');
+        alert('Щиро дякуємо Вам за підписку на наш онлайн-магазин "Mugunghwa Roots & Blooms"! Раді вітати Вас в нашому дружньому ком`юніті!');
     }
 
     return (
@@ -23,7 +20,7 @@ export default function NewsletterSubscription() {
                 <div className={styles.newsletterSubscriptionContainer}>
                     <div className={styles.newsletterSubscriptionContent}>
                         <h2 className={styles.newsletterSubscriptionTitle}>
-                            Будьте в курсі свіжих акцій та новин Mugunghwa Roots & Blooms!
+                            Будьте в курсі свіжих акцій та новин "Mugunghwa Roots & Blooms" !
                         </h2>
                         <p className={styles.newsletterSubscriptionDescription}>
                             Першими дізнавайтеся про новини, акції, знижки та спеціальні пропозиції на аграрну продукцію для Вас!
@@ -36,11 +33,11 @@ export default function NewsletterSubscription() {
                         <input 
                             type="email"
                             className={styles.newsletterSubscriptionFormInput}
-                            placeholder="Будь ласка, введіть Вашу електронну адресу..."
+                            placeholder="Будь ласка, введіть Вашу електронну адресу ..."
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            aria-label="Вашу електронна адреса"                          
+                            aria-label="Ваша електронна адреса"                          
                         />
                         <button
                             type="submit"

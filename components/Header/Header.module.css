@@ -102,6 +102,7 @@
     flex: 1;
     max-width: 800px;
     margin: 0 2rem;
+    margin-left: 8.5rem;
 }
 
 .searchInput {
@@ -114,7 +115,6 @@
     outline: none;
     transition: border-color 0.2s;
 }
-
 
 .searchInput:focus {
     border-color: #EB5B53;
@@ -148,6 +148,7 @@
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    margin-right: 2.25rem;
 }
 
 .actionItem {
@@ -189,6 +190,9 @@
 .mugunghwaBloomsRootsLogo {
     width: 80px;
     height: 80px;
+    position: absolute;
+    left: 60px;
+    top: 10px;
 }
 
 .salesAndPropositionsText {
@@ -298,6 +302,7 @@
 
     .logo {
         justify-content: center;
+        position: relative;
     }
 
     .searchContainer {
@@ -628,44 +633,54 @@
 
 @media (max-width: 768px) {
     .instagramLogo { 
-        width: 32px; 
-        height: 32px;
+        width: 46px; 
+        height: 46px;
+        margin-top: -12px;
     }
 
     .facebookLogo { 
-        width: 24px; 
-        height: 24px; 
+        width: 36px; 
+        height: 36px;
+        margin-top: -6px;
     }
 
     .tikTokLogo { 
-        width: 31px; 
-        height: 31px; 
+        width: 46px; 
+        height: 46px;
+        margin-top: -10px; 
     }
 
     .telegramLogo { 
-        width: 22px; 
-        height: 23px; 
-}
+        width: 33px; 
+        height: 33px;
+        margin-top: -5px;
+    }
 
     .viberLogo {
-        width: 22px; 
-        height: 22px; 
-        margin-left: 0; 
+        width: 34px; 
+        height: 34px;
+        margin-top: -6px;
     }
 
     .linkedInLogo { 
-        width: 30px; 
-        height: 30px; 
+        width: 46px; 
+        height: 46px;
+        margin-top: -11px;
+        margin-left: 1px; 
     }
 
     .xLogo { 
-        width: 22px; 
-        height: 22px; 
+        width: 34px; 
+        height: 34px;
+        margin-top: -6px; 
+        margin-left: 1px; 
     }
 
     .pinterestLogo { 
-        width: 25px; 
-        height: 25px; 
+        width: 38px; 
+        height: 38px;
+        margin-top: -9px;  
+        margin-left: 5px;
     }
 
     .sidebarSocials {

@@ -1,5 +1,5 @@
 .sliderContainer {
-  width: 1080px;
+  width: 1010px;
   height: 525px;
   position: relative;
   overflow: hidden;
@@ -10,7 +10,10 @@
 
 @media (max-width: 440px) {
   .sliderContainer {
-    width: 102% !important;
+    width: 92% !important;
+    height: 425px !important;
+    margin-left: 15px;
+    margin-right: 40px;
   }
 }
 
@@ -61,8 +64,8 @@
 
 @media (max-width: 440px) {
   .bannerText {
-    font-size: 24px!important;
-    margin-left: 30px;
+    font-size: 24px !important;
+    margin-left: 50px;
   }
 }
 
@@ -86,7 +89,7 @@
 @media (max-width: 440px) {
   .bannerSubtext {
     font-size: 18px;
-    margin-left: 30px;
+    margin-left: 50px;
   }
 }
 
@@ -205,4 +208,24 @@
   width: 150px;
   height: 150px;
   margin-left: 30px;
+}
+
+@media (max-width: 440px) {
+  .slide:nth-child(2) .brandLogoSize {
+    width: 50px !important;
+  }
+
+  .slide:nth-child(3) .brandLogoSize {
+    width: 70px !important;
+  }
+
+  .navBtn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
 }

@@ -29,6 +29,7 @@ import ViberRedLogo from '@/assets/logo/ViberLogo/ViberRedLogo';
 import LinkedInRedLogo from '@/assets/logo/LinkedInLogo/LinkedInRedLogo';
 import XRedLogo from '@/assets/logo/XLogo/XRedLogo';
 import PinterestRedLogo from '@/assets/logo/PinterestLogo/PinterestRedLogo';
+import MailLogo from '@/assets/logo/MailIcon/MailIcon';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,7 +52,7 @@ export default function Header() {
                 <div className={styles.salesAndPropositions}>
                     <div className={styles.salesAndPropositionsWrapper}>
                         <a href="email:mugunghwarootandbloomsteam@gmail.com" className={styles.phoneButton}>
-                            <PhoneLogo className={styles.phoneButtonLogo} />
+                            <MailLogo className={styles.phoneButtonLogo} />
                             <span className={styles.phoneButtonText}>mugunghwarootandbloomsteam@gmail.com</span>
                         </a>
                         <a href="tel:+380678333023" className={styles.phoneButton}>
@@ -85,30 +86,30 @@ export default function Header() {
                     </div>
                     <div className={styles.userActions}>
                         <div className={styles.actionItem}>
-                            <CatalogLogo className={styles.catalogLogo} /> Каталог
-                        </div>
-                        <div className={styles.actionItem}>
-                            <NewProductsLogo className={styles.catalogLogo} /> Акції та новинки
+                            <CatalogLogo className={styles.catalogLogo} /> 
+                            <span>Каталог</span>
                         </div>
                         <div className={styles.actionItem} style={{ position: 'relative' }}>
                             <SavesLogo className={styles.catalogLogo} /> 
                             {compareGoodsCount > 0 && 
                                 <span className={styles.compareBadge}>{compareGoodsCount}</span>
                             }
-                            Порівняння
+                            <span>Порівняння</span>
                         </div>
                         <div className={styles.actionItem} style={{ position: 'relative' }}>
                             <FavoritesLogo className={styles.catalogLogo} /> 
                             {favoritesGoodsCount > 0 && 
                                 <span className={styles.favoritesBadge}>{favoritesGoodsCount}</span>
                             }
-                            Улюблене
+                            <span>Улюблене</span>
                         </div>
                         <div className={styles.actionItem}>
-                            <ShoppingCartLogo className={styles.catalogLogo} /> Кошик
+                            <ShoppingCartLogo className={styles.catalogLogo} />
+                            <span>Кошик</span>
                         </div>
                         <div className={styles.actionItem}>
-                            <AuthorizationLogo className={styles.catalogLogo} /> Увійти
+                            <AuthorizationLogo className={styles.catalogLogo} /> 
+                            <span>Увійти</span>
                         </div>
                     </div>
                 </header>

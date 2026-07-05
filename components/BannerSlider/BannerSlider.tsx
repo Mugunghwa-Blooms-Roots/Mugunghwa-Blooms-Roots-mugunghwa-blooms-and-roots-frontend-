@@ -7,7 +7,7 @@ import {
 } from "react";
 import Image from "next/image";
 import styles from "./BannerSlider.module.css";
-import ButtonButton from "../BannerButton/BannerButton";
+import BannerButton from "../BannerButton/BannerButton";
 import bannerImageSliderMockData from "../../data/bannerImageSliderMockData";
 
 export default function BannerSlider() {
@@ -39,7 +39,7 @@ export default function BannerSlider() {
               <div className={`${styles.content} ${slide.contentMargin}`}>
                 <h2 className={styles.bannerText}>{slide.text}</h2>
                 <h3 className={styles.bannerSubtext}>{slide.subtext}</h3>
-                <ButtonButton
+                <BannerButton
                   className={slide.brandLogoSize} 
                   Icon={slide.logoComponent} 
                 />

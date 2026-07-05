@@ -2,9 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Footer.module.css';
 import MugunghwaBloomsRootsLogo from '../../assets/logo/MugunghwaBloomsRootsLogo/transparent/MugunghwaBloomsRootsTransparentLogo.png';
-import PhoneIcon from '@/assets/logo/PhoneIcon/PhoneIcon';
-import MailIcon from '@/assets/logo/MailIcon/MailIcon';
-import LocationIcon from '@/assets/logo/LocationIcon/LocationIcon';
+import PhoneRedIcon from '@/assets/logo/PhoneIcon/PhoneRedIcon';
+import MailRedIcon from '@/assets/logo/MailIcon/MailRedIcon';
+import LocationRedIcon from '@/assets/logo/LocationIcon/LocationRedIcon';
 
 export default function Footer() {
     return (
@@ -17,7 +17,7 @@ export default function Footer() {
                             Mugunghwa Blooms & Roots - онлайн-магазин товарів з Південної Кореї та не тільки
                         </p>
                     </div>
-                    <div className={styles.footerLinksSection}>
+                    <div className={`${styles.footerLinksSection} ${styles.footerLinksFirstSection}`}>
                         <h3 className={styles.footerColumnTitle}>
                             Користувачам
                         </h3>
@@ -44,14 +44,14 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className={styles.footerLinksSection}>
+                    <div className={`${styles.footerLinksSection} ${styles.footerLinksSecondSection}`}>
                         <h3 className={styles.footerColumnTitle}>
                             Про нашу команду
                         </h3>
                         <ul className={styles.footerLinksList}>
                             <li>
                                 <Link className={styles.footerLink} href="#">
-                                    Про Mugunghwa Blooms & Roots
+                                    Про "Mugunghwa Blooms & Roots"
                                 </Link>
                             </li>
                             <li>
@@ -71,21 +71,21 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div className={styles.footerContactSection}>
+                    <div className={`${styles.footerContactSection} ${styles.footerLinksThirdSection}`}>
                         <h3 className={styles.footerColumnTitle}>
                             Наші контакти
                         </h3>
                         <ul className={styles.footerLinksList}>
                             <p className={styles.footerContactInfo}>
-                                <PhoneIcon className={styles.footerContactInfoIcon} /> 
+                                <PhoneRedIcon className={styles.footerContactInfoIcon} /> 
                                 + 38 (067) 83-33-023
                             </p>
                             <p className={styles.footerContactInfo}>
-                                <MailIcon className={styles.footerContactInfoIcon} /> 
+                                <MailRedIcon className={styles.footerContactInfoIcon} /> 
                                 mugunghwabloomsandrootsteam@gmail.com
                             </p>
                             <p className={styles.footerContactInfo}>
-                                <LocationIcon className={styles.footerContactInfoIcon} /> 
+                                <LocationRedIcon className={styles.footerContactInfoIcon} /> 
                                 Працюємо по усім території України та Південної Кореї
                             </p>
                         </ul>

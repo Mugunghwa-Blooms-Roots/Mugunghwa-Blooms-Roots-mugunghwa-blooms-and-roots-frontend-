@@ -20,7 +20,9 @@ const BannerButton: React.FC<BannerButtonProps> = ({
       onClick={onClick}
     >
       <span className={styles.btnText}>{text}</span>
-      {Icon && <Icon className={`${styles.brandLogo} ${className}`} />}
+      {Icon && 
+        <Icon className={`${styles.brandLogo} ${className}`} />
+      }
     </button>
   );
 };

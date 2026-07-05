@@ -132,17 +132,13 @@ export default function ProductCard({
                 </div>
                 <div className={styles.productInfo}>
                     <div className={styles.productRating}>
-                        {
-                            rating === 5 && (
-                                <div className={styles.productStarsWrapper}>
-                                    <span className={styles.productStars}>★</span>
-                                    <span className={styles.productStars}>★</span>
-                                    <span className={styles.productStars}>★</span>
-                                    <span className={styles.productStars}>★</span>
-                                    <span className={styles.productStars}>★</span>
-                                </div>
-                            )
-                        }
+                        <div className={styles.productStarsWrapper}>
+                            <span className={styles.productStars}>★</span>
+                            <span className={styles.productStars}>★</span>
+                            <span className={styles.productStars}>★</span>
+                            <span className={styles.productStars}>★</span>
+                            <span className={styles.productStars}>★</span>
+                        </div>
                         <span className={styles.productAverageRating}>{rating}</span>
                         <span className={styles.productReviewsCount}>({reviewsCount})</span>
                     </div>
@@ -162,13 +158,13 @@ export default function ProductCard({
                                 <span className={styles.brandName}>{creator}</span>
                             </span>
                         </h5>
-                        <h5 className={styles.productCreator}>
+                        <h5 className={styles.productRecommendedFor}>
                             <b>Доступність</b>: В наявності
                         </h5>
                         <h5 className={styles.productCreator}>
                             <b>Рекомендовано для</b>: {recommendedFor}
                         </h5>
-                        <h5 className={styles.productCreator}>
+                        <h5 className={styles.productVolume}>
                             <b>Об'єм</b>:
                             <button 
                                 className={`${styles.productVolumeBtn} ${styles.productVolumeBtnFirstOne} ${selectedVolume === 1 ? styles.activeVolume : ''}`}

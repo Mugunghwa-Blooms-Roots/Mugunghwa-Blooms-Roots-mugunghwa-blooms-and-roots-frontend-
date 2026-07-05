@@ -1,24 +1,10 @@
 .productGridContainer {
   display: grid;
   grid-template-columns: repeat(4, minmax(220px, 1fr)); 
-  margin-top: 50px;
-  gap: 30px;
-}
-
-.productCard {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  border-radius: 12px;
-  padding: 16px;
-  width: 100%; 
-  max-width: 325px; 
-  height: 720px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  position: relative;
-  cursor: pointer;
-  margin: 0 auto; 
+  margin-top: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 24px;
 }
 
 @media (max-width: 1200px) {
@@ -38,5 +24,11 @@
     grid-template-columns: 1fr;
     gap: 20px;
     justify-items: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .productGridContainer {
+    margin-top: 25px;
   }
 }
